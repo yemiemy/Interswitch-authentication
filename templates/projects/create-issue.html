@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="jumbotron">
+        <div class="container">
+            {{project}}
+            <form action="{% url 'create_issue' project.id %}" method="POST">
+                {% csrf_token %}
+                <h6 class="font-weight-bold">Issue title</h6>
+                <input type="text" class="form-control field" name="title">
+                <br>
+                <h6 class="font-weight-bold">Issue Description</h6>
+                <textarea name="message" id="" cols="30" rows="8" class="form-control field"></textarea>
+                <br>
+                <input type="submit" class="btn-style-2" value="CREATE">
+            </form>
+        </div>
+    </div>
+{% endblock content %}
+    

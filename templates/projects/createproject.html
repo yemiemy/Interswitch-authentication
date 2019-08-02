@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+
+      <div class="container container-fluid">
+        <h5 class="mt-4 page-title">CREATE PROJECT</h5>
+        <div class="card main-content">
+        <div class="card-body">
+        <form  method="post">
+          {% csrf_token %}
+            <h6 class="font-weight-bold">Project title</h6>
+            {{form.title}}
+            <br>
+            <h6 class="font-weight-bold">Project Description</h6>
+            {{form.description}}
+            <br>
+            <h6 class="font-weight-bold">Add attachment</h6>
+            {{form.attachment}}
+            <br><br>
+            <h6 class="font-weight-bold">Duration</h6>
+            <div class="duration-section">
+                  <span>start date: {{form.startdate}}</span>
+                  <span>End date: {{form.deadline}}</span>
+            </div>
+            <div class="submit-section">
+                <input type="submit" class="btn-style-2" value="CREATE">
+            </div>
+          </form>
+        </div>
+        </div>
+        </div>
+
+    </div>
+
+  </div>
+  {% endblock %}

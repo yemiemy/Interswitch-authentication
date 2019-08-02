@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Create A New Project</title>
+  <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="common.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="border-right bg-custom-1" id="sidebar-wrapper">
+        <div class="sidebar-heading"><img width="240px" class="header-image" src="img/logo-2.jpg" alt="logo"></div>
+        <div class="list-group list-group-flush">
+            <a href="dashboard.html" class="list-group-item list-group-item-action bg-custom-1"><i class="fa fa-table"></i> Dashboard</a>
+            <a href="notifications.html" class="list-group-item list-group-item-action bg-custom-1"><i class="fa fa-bell"></i> Notifications</a>
+            <a href="createproject.html" class="list-group-item list-group-item-action bg-custom-1"><i class="fa fa-plus"></i> Create Project</a>
+            <a href="viewprojects.html" class="list-group-item list-group-item-action bg-custom-1"><i class="fa fa-eye"></i> Existing Projects</a>
+            <a href="leaderboard.html" class="list-group-item list-group-item-action bg-custom-1"><i class="fa fa-clipboard"></i> View Leaderboard</a>
+            <a href="manageteams.html" class="list-group-item list-group-item-action bg-custom-1"><i class="fa fa-gear"></i> Manage teams</a>
+          </div>
+      <div class="sidebar-logout">
+        <a href="" class="style-button-1">Log Out</a>
+      </div>
+    </div>
+
+    <div id="page-content-wrapper">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <button class="btn" id="menu-toggle">menu</button>
+            <div class="form-group search-place">
+                <input type="search" class="form-control searchbox" placeholder="Search projects">
+              </div>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"><i class="fa fa-user-circle"></i> Mike Adeleke<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"></a>
+                </li>
+              </ul>
+            </div>
+  
+        </nav>
+
+      <div class="container container-fluid">
+        <h2 class="mt-4 page-title">CREATE NEW TEAM</h2>
+        <form action="">
+            <h5>Team Name</h5>
+            <input type="text" class="form-control field" name="teamname">
+            <br>
+            <h5>Select members of team</h5>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Members</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Member</th>
+                    <th scope="col">Team Lead</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ada Oyom</td>
+                    <td>Developer relations</td>
+                    <td>IT</td>
+                    <td><input type="checkbox" class="form-control"></td>
+                    <td><input type="radio" name="teamlead" class="form-control" value="Ada Oyom"></td>
+                  </tr>
+                  <tr>
+                    <td>Jacob Eze</td>
+                    <td>Software Developer</td>
+                    <td>IT</td>
+                    <td><input type="checkbox" class="form-control"></td>
+                    <td><input type="radio" name="teamlead" class="form-control" value="Jacob Eze"></td>
+                  </tr>
+                  <tr>
+                    <td>Joseph Godwin</td>
+                    <td>Backend (JS) developer</td>
+                    <td>Engineering</td>
+                    <td><input type="checkbox" class="form-control"></td>
+                    <td><input type="radio" name="teamlead" class="form-control" value="Joseph Godwin"></td>
+
+                  </tr>
+                  <tr>
+                      <td>Ada Oyom</td>
+                      <td>Developer relations</td>
+                      <td>IT</td>
+                      <td><input type="checkbox" class="form-control"></td>
+                      <td><input type="radio" name="teamlead" class="form-control" value="Ada Oyom"></td>
+                    </tr>
+                    <tr>
+                      <td>Jacob Eze</td>
+                      <td>Software Developer</td>
+                      <td>IT</td>
+                      <td><input type="checkbox" class="form-control" value="Jacob Eze"></td>
+                      <td><input type="radio" name="teamlead" class="form-control checkbox" value="Jacob Eze"></td>
+                    </tr>
+                    <tr>
+                      <td>Joseph Godwin</td>
+                      <td>Backend (JS) developer</td>
+                      <td>Engineering</td>
+                      <td><input type="checkbox" class="form-control" value="Joseph Godwin"></td>
+                      <td><input type="radio" name="teamlead" class="form-control" value="Joseph Godwin"></td>
+  
+                    </tr>
+                    
+                </tbody>
+              </table>
+            <div class="submit-section">
+                <input type="submit" class="btn btn-style-2" value="CREATE TEAM">
+            </div>
+          </form>
+        </div>
+
+    </div>
+
+  </div>
+
+  <script src="css/jquery/jquery.min.js"></script>
+  <script src="css/bootstrap/js/bootstrap.min.js"></script>
+
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>

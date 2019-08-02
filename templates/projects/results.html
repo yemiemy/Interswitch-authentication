@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="main-content">
+      <div class="container container-fluid"> 
+        <h5 class="mt-4 page-title"> Search Results for {{query}} </h5>
+
+        {% if projects %}
+					{% for project in projects %}
+					
+					<div class="col-md-3 col-lg-3 mb-4 text-center">
+						<div class="product-entry border">
+							<div class="desc">
+								<h2><a href="{% url 'project' %}">{{project.title}}</a></h2>
+								<span class="price"> {{project.description|truncatewords:15}}...<a href="{% url 'project' %}">read more</a></span>
+
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+					{% else %}
+					<div class="col-md-3 col-lg-3 mb-4 text-center">
+						<div class="product-entry border">
+								<p>Your search for "{{query}}" did not match any results.</p>
+							</div>
+						</div>
+					</div>
+					{% endif %}
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+ {% endblock %}
+
+
+ {# {% if post %}
+	{% for post in post%}
+ <div class="sidebar-box ftco-animate">
+              <ul class="categories">
+                
+                <li><a href="{% url 'single_page' post.id %}">{{post.title}} </a></li>
+                {% endfor %}
+	{% else %}
+	<li>Sorry! your search for  "{{query}}"  didn't match any results</li>
+	{% endif %}
+              </ul> #}

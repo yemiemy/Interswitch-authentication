@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+      <div class="container container-fluid">
+        <h5 class="mt-4 page-title">TEAMS' LEADERBOARD</h5>
+            <div class="card">
+              <div class="card-body">
+              <table class="table" style="height: 400px !important;">
+                <thead>
+                  <tr>
+                    <th scope="col"class="font-weight-bold">#</th>
+                    <th scope="col" class="font-weight-bold">Team name</th>
+                    <th scope="col"  class="font-weight-bold">Team lead</th>
+                    <th scope="col"  class="font-weight-bold">Points</th>
+                  </tr>
+                </thead>
+                <tbody style="height: 350px !important;">
+                  {% for team in teams %}
+                  <tr class="">
+                    <td scope="row">{{ forloop.counter }}</td>
+                    <td>{{team.name}}</td>
+                    <td>{{team.program_manager}}</td>
+                    <td>{{team.total_points}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+
+  </div>
+
+{% endblock %}

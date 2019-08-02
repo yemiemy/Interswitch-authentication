@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+ {% load humanize %}
+
+  
+      <div class="main-content">
+      <div class="container container-fluid"> 
+        <h5 class="mt-4 page-title"> Existing Projects</h5>
+        {% for project in projects %}
+        	{{project.title}}
+        	<br>
+        	{{project.description}}
+        	<br>
+        	{{project.startdate|naturalday}}
+          <br>
+          {{project.deadline|naturaltime}}
+        {% endfor %}
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}
